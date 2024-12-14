@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "自动填单插件",
+    "description": "自动填写报销单",
+    "version": "1.0",
+    "permissions": [
+        "activeTab",
+        "storage",
+        "scripting",
+        "alarms",
+        "background"
+    ],
+    "action": {
+      "default_popup": "index.html",
+      "default_icon": "favicon.ico"
+    },
+    "content_scripts": [
+        {
+          "matches": ["http://*"],
+          "js": ["./content.js"]
+        }
+    ]
+  }
